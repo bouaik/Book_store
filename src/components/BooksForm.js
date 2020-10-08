@@ -1,5 +1,5 @@
 import React from 'react';
-
+/* eslint-disable jsx-a11y/label-has-associated-control */
 const BooksForm = () => {
   const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
