@@ -1,4 +1,4 @@
-const booksReducer = (state = [], action) => {
+const books = (state = [], action) => {
   switch (action.type) {
     case 'CREATE_BOOK':
       return [
@@ -23,4 +23,4 @@ const booksReducer = (state = [], action) => {
   }
 };
 
-export default booksReducer;
+export default books;
