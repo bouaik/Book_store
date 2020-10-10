@@ -13,8 +13,8 @@ Book.propTypes = {
   book: PropTypes.shape({
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
-    category: PropTypes.string.isRequired
-  }).isRequired
+    category: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Book;
