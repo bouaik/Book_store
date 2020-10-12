@@ -1,6 +1,6 @@
 export const createBook = book => ({
   type: 'CREATE_BOOK',
-  id: book.id,
+  id: Math.floor(Math.random() * 10000),
   title: book.title,
   category: book.category,
 });

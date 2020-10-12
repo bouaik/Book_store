@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { createBook } from '../actions/index';
 
 class BooksForm extends Component {
@@ -22,9 +23,9 @@ class BooksForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    const { createBook } = this.props;
     createBook(this.state);
     this.setState(this.baseState);
-    console.log("Form Submitted");
   }
 
   render() {
@@ -69,9 +70,12 @@ class BooksForm extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  createBook: () => dispatch(createBook()),
+  createBook: book => dispatch(createBook(book)),
 });
 
+BooksForm.propTypes = {
+  createBook: PropTypes.func.isRequired,
+};
 export default connect(
   () => ({}),
   mapDispatchToProps,
