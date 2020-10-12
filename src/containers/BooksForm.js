@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { createBook } from '../actions/index';
 
 class BooksForm extends Component {
   constructor(props) {
@@ -7,13 +9,22 @@ class BooksForm extends Component {
       title: '',
       category: '',
     };
+    this.baseState = this.state;
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   async handleChange(e, field) {
     await this.setState({
       [field]: e.target.value,
     });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    createBook(this.state);
+    this.setState(this.baseState);
+    console.log("Form Submitted");
   }
 
   render() {
@@ -28,7 +39,7 @@ class BooksForm extends Component {
     ];
     const { title, category } = this.state;
     return (
-      <form>
+      <form onSubmit={event => this.handleSubmit(event)}>
         <label htmlFor="title">
           Title
           <input
@@ -57,4 +68,11 @@ class BooksForm extends Component {
   }
 }
 
-export default BooksForm;
+const mapDispatchToProps = dispatch => ({
+  createBook: () => dispatch(createBook()),
+});
+
+export default connect(
+  () => ({}),
+  mapDispatchToProps,
+)(BooksForm);
