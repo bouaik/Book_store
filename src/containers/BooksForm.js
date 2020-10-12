@@ -7,6 +7,13 @@ class BooksForm extends Component {
       title: '',
       category: '',
     };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  async handleChange(e, field) {
+    await this.setState({
+      [field]: e.target.value,
+    });
   }
 
   render() {
@@ -19,14 +26,26 @@ class BooksForm extends Component {
       'Learning',
       'Sci-Fi',
     ];
+    const { title, category } = this.state;
     return (
       <form>
         <label htmlFor="title">
           Title
-          <input id="title" type="text" name="title" />
+          <input
+            id="title"
+            type="text"
+            name="title"
+            title={title}
+            onChange={event => this.handleChange(event, 'title')}
+          />
         </label>
-        <select id="category">
-          {categories.map((e) => (
+        <select
+          id="category"
+          name="category"
+          category={category}
+          onChange={event => this.handleChange(event, 'category')}
+        >
+          {categories.map(e => (
             <option key={e} value={e}>
               {e}
             </option>
