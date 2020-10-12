@@ -12,6 +12,7 @@ function BooksList({ books }) {
             <td>Book ID</td>
             <td>Title</td>
             <td>category</td>
+            <td>Delete Action</td>
           </tr>
         </thead>
         <tbody>
