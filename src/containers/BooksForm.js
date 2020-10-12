@@ -1,20 +1,41 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const BooksForm = () => {
-  const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+class BooksForm extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      title: '',
+      category: '',
+    };
+  }
 
-  return (
-    <form>
-      <label htmlFor="title">
-        Title
-        <input id="title" type="text" name="title" />
-      </label>
-      <select id="category">
-        {categories.map(e => <option key={e} value={e}>{e}</option>)}
-      </select>
-      <button type="submit">Submit</button>
-    </form>
-  );
-};
+  render() {
+    const categories = [
+      'Action',
+      'Biography',
+      'History',
+      'Horror',
+      'Kids',
+      'Learning',
+      'Sci-Fi',
+    ];
+    return (
+      <form>
+        <label htmlFor="title">
+          Title
+          <input id="title" type="text" name="title" />
+        </label>
+        <select id="category">
+          {categories.map((e) => (
+            <option key={e} value={e}>
+              {e}
+            </option>
+          ))}
+        </select>
+        <button type="submit">Submit</button>
+      </form>
+    );
+  }
+}
 
 export default BooksForm;
