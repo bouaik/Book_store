@@ -39,6 +39,7 @@ class BooksForm extends Component {
       title: '',
       category: categories[0],
     });
+    e.target.reset();
   }
 
   render() {
@@ -52,14 +53,14 @@ class BooksForm extends Component {
             type="text"
             name="title"
             value={title}
-            onChange={event => this.handleChange(event, 'title')}
+            onChange={event => this.handleChange(event)}
           />
         </label>
         <select
           id="category"
           name="category"
           value={category}
-          onChange={event => this.handleChange(event, 'category')}
+          onChange={event => this.handleChange(event)}
         >
           {categories.map(e => (
             <option key={e} value={e}>
@@ -81,6 +82,6 @@ BooksForm.propTypes = {
   createBook: PropTypes.func.isRequired,
 };
 export default connect(
-  () => ({}),
+  null,
   mapDispatchToProps,
 )(BooksForm);
