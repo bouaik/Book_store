@@ -55,7 +55,7 @@ class BooksForm extends Component {
         <select
           id="category"
           name="category"
-          category={category}
+          value={category}
           onChange={event => this.handleChange(event, 'category')}
         >
           {categories.map(e => (
