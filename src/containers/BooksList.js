@@ -34,7 +34,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  removeBook
+  removeBook,
 };
 BooksList.propTypes = {
   books: PropTypes.arrayOf(PropTypes.object).isRequired,

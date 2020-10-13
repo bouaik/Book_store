@@ -25,7 +25,7 @@ class BooksForm extends Component {
   }
 
   async handleChange(e) {
-    const { name } = e.target
+    const { name } = e.target;
     this.setState({
       [name]: e.target.value,
     });
@@ -74,7 +74,7 @@ class BooksForm extends Component {
 }
 
 const mapDispatchToProps = {
-  createBook
+  createBook,
 };
 
 BooksForm.propTypes = {
