@@ -48,7 +48,7 @@ class BooksForm extends Component {
             id="title"
             type="text"
             name="title"
-            title={title}
+            value={title}
             onChange={event => this.handleChange(event, 'title')}
           />
         </label>
