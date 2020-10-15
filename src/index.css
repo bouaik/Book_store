@@ -1,0 +1,15 @@
+body {
+  margin: 0 auto;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

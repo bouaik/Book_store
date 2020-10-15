@@ -45,6 +45,7 @@ class BooksForm extends Component {
   render() {
     const { title, category } = this.state;
     return (
+      <div>
       <form onSubmit={event => this.handleSubmit(event)}>
         <label htmlFor="title">
           Title
@@ -70,6 +71,7 @@ class BooksForm extends Component {
         </select>
         <button type="submit">Submit</button>
       </form>
+      </div>
     );
   }
 }
