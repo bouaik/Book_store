@@ -1,26 +1,26 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { createStore } from "redux";
-import { Provider } from "react-redux";
-import rootReducer from "./reducers/index";
-import App from "./components/App";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import rootReducer from './reducers/index';
+import App from './components/App';
 
 const initialState = {
   books: [
     {
       id: Math.floor(Math.random() * 10000),
-      title: "Harry potter",
-      category: "History",
+      title: 'Harry potter',
+      category: 'History',
     },
     {
       id: Math.floor(Math.random() * 10000),
-      title: "Alchemiste",
-      category: "Fiction",
+      title: 'Alchemiste',
+      category: 'Fiction',
     },
     {
       id: Math.floor(Math.random() * 10000),
-      title: "Steve jobs",
-      category: "Biography",
+      title: 'Steve jobs',
+      category: 'Biography',
     },
   ],
 };
@@ -33,5 +33,5 @@ ReactDOM.render(
       <App />
     </Provider>
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root'),
 );

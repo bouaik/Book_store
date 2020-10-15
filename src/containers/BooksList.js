@@ -1,22 +1,24 @@
-import React from "react";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
-import Book from "../components/Book";
-import { removeBook, changeFilter } from "../actions/index";
-import CategoryFilter from "../components/CategoryFilter";
+import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import Book from '../components/Book';
+import { removeBook, changeFilter } from '../actions/index';
+import CategoryFilter from '../components/CategoryFilter';
 
-function BooksList({ books, filter, removeBook, changeFilter }) {
-  const handleRemoveBook = (book) => {
+function BooksList({
+  books, filter, removeBook, changeFilter,
+}) {
+  const handleRemoveBook = book => {
     removeBook(book);
   };
 
   let booksfiltered = books;
-  if (filter === "All") {
+  if (filter === 'All') {
     booksfiltered = books;
   } else {
-    booksfiltered = books.filter((book) => book.category === filter);
+    booksfiltered = books.filter(book => book.category === filter);
   }
-  const handleFilterChange = (e) => {
+  const handleFilterChange = e => {
     changeFilter(e.target.value);
   };
 
@@ -33,7 +35,7 @@ function BooksList({ books, filter, removeBook, changeFilter }) {
           </tr>
         </thead>
         <tbody>
-          {booksfiltered.map((book) => (
+          {booksfiltered.map(book => (
             <Book book={book} removeBook={handleRemoveBook} key={book.id} />
           ))}
         </tbody>
@@ -42,7 +44,7 @@ function BooksList({ books, filter, removeBook, changeFilter }) {
   );
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   books: state.books,
   filter: state.filter,
 });
