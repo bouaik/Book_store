@@ -10,7 +10,7 @@ const initialState = {
     {
       id: Math.floor(Math.random() * 10000),
       title: 'Harry potter',
-      category: 'Fantasy',
+      category: 'History',
     },
     {
       id: Math.floor(Math.random() * 10000),
