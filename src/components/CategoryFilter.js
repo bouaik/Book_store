@@ -1,16 +1,16 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const CategoryFilter = ({ handleFilterChange }) => {
   const categories = [
-    "All",
-    "Action",
-    "Biography",
-    "History",
-    "Horror",
-    "Kids",
-    "Learning",
-    "Sci-Fi",
+    'All',
+    'Action',
+    'Biography',
+    'History',
+    'Horror',
+    'Kids',
+    'Learning',
+    'Sci-Fi',
   ];
 
   return (
@@ -21,7 +21,7 @@ const CategoryFilter = ({ handleFilterChange }) => {
         onChange={handleFilterChange}
         className="filter-select"
       >
-        {categories.map((e) => (
+        {categories.map(e => (
           <option key={e}>{e}</option>
         ))}
       </select>
