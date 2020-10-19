@@ -6,6 +6,7 @@ const CategoryFilter = ({ handleFilterChange }) => {
     'All',
     'Action',
     'Biography',
+    'Fiction',
     'History',
     'Horror',
     'Kids',
@@ -21,7 +22,7 @@ const CategoryFilter = ({ handleFilterChange }) => {
         onChange={handleFilterChange}
         className="filter-select"
       >
-        {categories.map(e => (
+        {categories.map((e) => (
           <option key={e}>{e}</option>
         ))}
       </select>
