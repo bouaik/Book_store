@@ -1,11 +1,15 @@
 import React from "react";
+import userImg from "../user.svg";
 
 const Nav = () => {
   return (
-    <div>
-      <h1>Bookstore CMS</h1>
+    <div className="navbar">
+      <h1 className="blue">Bookstore CMS</h1>
       <p>BOOKS</p>
-      <p>CATEGORIES</p>
+      <p className="disabled">CATEGORIES</p>
+      <div className="user-img">
+        <img src={userImg} alt="Profile-image" />
+      </div>
     </div>
   );
 };
