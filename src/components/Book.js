@@ -4,11 +4,22 @@ import PropTypes from "prop-types";
 const Book = ({ book, removeBook }) => (
   <tr className="book-wrapper">
     <div className="book-info">
-      <td>{book.category}</td>
-      <td>{book.title}</td>
-      <td>
-        <button type="button" onClick={() => removeBook(book)}>
-          Remove Book
+      <td className="book-category">{book.category}</td>
+      <td className="book-title">{book.title}</td>
+      <td className="options">
+        <button type="button" className="buttons border-right">
+          Comments
+        </button>
+        <button
+          type="button"
+          className="buttons border-right"
+          onClick={() => removeBook(book)}
+          right
+        >
+          Remove
+        </button>
+        <button type="button" className="buttons">
+          Edit
         </button>
       </td>
     </div>

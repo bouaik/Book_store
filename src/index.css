@@ -1,9 +1,14 @@
+body {
+  background-color: #f5f6fa;
+}
+
 /* Navbar */
 .navbar {
   display: flex;
   align-items: center;
   padding: 0 70px;
   flex-wrap: wrap;
+  background-color: #fff;
 }
 
 .navbar h1 {
@@ -51,10 +56,54 @@
 }
 
 /* Book */
+table {
+  width: 100%;
+}
 .book-wrapper {
-  width: 1200px;
+  width: 80%;
   display: flex;
   justify-content: space-between;
-  border: 1px solid teal;
-  margin-top: 10px;
+  margin: 10px auto;
+  padding: 20px 60px;
+  background-color: #fff;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-category {
+  padding-top: 10px;
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.book-title {
+  width: 197px;
+  font-size: 22px;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-weight: 700;
+  color: #121212;
+}
+
+.options {
+  margin: 20px 0 10px 0;
+}
+.buttons {
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+.border-right {
+  border-right: 1px solid #ddd;
 }
