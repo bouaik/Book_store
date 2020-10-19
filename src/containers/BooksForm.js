@@ -48,22 +48,22 @@ class BooksForm extends Component {
     return (
       <div className="form-wrapper">
         <h2>Add new Book</h2>
-        <form onSubmit={(event) => this.handleSubmit(event)}>
+        <form onSubmit={event => this.handleSubmit(event)}>
           <input
             id="title"
             type="text"
             name="title"
             value={title}
-            onChange={(event) => this.handleChange(event)}
+            onChange={event => this.handleChange(event)}
             placeholder="Book Title"
           />
           <select
             id="category"
             name="category"
             value={category}
-            onChange={(event) => this.handleChange(event)}
+            onChange={event => this.handleChange(event)}
           >
-            {categories.map((e) => (
+            {categories.map(e => (
               <option key={e} value={e}>
                 {e}
               </option>
