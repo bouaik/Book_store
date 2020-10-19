@@ -24,14 +24,6 @@ function BooksList({ books, filter, removeBook, changeFilter }) {
     <div>
       <CategoryFilter handleFilterChange={handleFilterChange} />
       <table>
-        <thead>
-          <tr>
-            <td>Book ID</td>
-            <td>Title</td>
-            <td>category</td>
-            <td>Delete Action</td>
-          </tr>
-        </thead>
         <tbody>
           {booksfiltered.map((book) => (
             <Book book={book} removeBook={handleRemoveBook} key={book.id} />

@@ -49,3 +49,12 @@
 .filter-select {
   font-size: 20px;
 }
+
+/* Book */
+.book-wrapper {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid teal;
+  margin-top: 10px;
+}
