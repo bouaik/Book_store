@@ -12,8 +12,18 @@ body {
 }
 
 .navbar h1 {
-  font-family: Montserratapple-system, system-ui, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    Montserratapple-system,
+    system-ui,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif;
   font-size: 30px;
   font-weight: 700;
 }
@@ -59,6 +69,7 @@ body {
 table {
   width: 100%;
 }
+
 .book-wrapper {
   width: 80%;
   display: flex;
@@ -91,6 +102,7 @@ table {
 .options {
   margin: 20px 0 10px 0;
 }
+
 .buttons {
   font-family: Roboto, Helvetica, sans-serif;
   font-size: 14px;
@@ -104,6 +116,7 @@ table {
   cursor: pointer;
   border: none;
 }
+
 .border-right {
   border-right: 1px solid #ddd;
 }
@@ -156,9 +169,11 @@ table {
   color: rgb(148, 148, 148);
   text-transform: uppercase;
 }
+
 .num {
   font-weight: bold;
 }
+
 .update-button {
   margin-top: 25px;
   background-color: #0290ff;
@@ -169,10 +184,12 @@ table {
   color: #fff;
   text-transform: uppercase;
 }
+
 /* Form */
 .form-wrapper {
   padding: 10px 60px;
 }
+
 .form-wrapper h2 {
   width: 174px;
   height: 24px;
@@ -185,6 +202,7 @@ table {
   color: #888;
   text-transform: uppercase;
 }
+
 .form-wrapper form input {
   width: 50%;
   height: 45px;
@@ -193,6 +211,7 @@ table {
   background-color: #fff;
   box-sizing: border-box;
 }
+
 .form-wrapper form select {
   margin-left: 50px;
   width: 20%;
