@@ -23,7 +23,13 @@ const Book = ({ book, removeBook }) => (
         </button>
       </td>
     </div>
-    <div className="book-progress">75%</div>
+    <div className="book-progress">
+      <div className="circle"></div>
+      <div className="status-info">
+        <span>80%</span>
+        <span>Completed</span>
+      </div>
+    </div>
     <div className="book-update">update Progress</div>
   </tr>
 );
