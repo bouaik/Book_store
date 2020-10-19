@@ -1,3 +1,4 @@
+/* Navbar */
 .navbar {
   display: flex;
   align-items: center;
@@ -35,4 +36,16 @@
 
 .disabled {
   opacity: 0.5;
+}
+
+/* Filter */
+.filter-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-word,
+.filter-select {
+  font-size: 20px;
 }
