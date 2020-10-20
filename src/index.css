@@ -188,6 +188,7 @@ table {
 /* Form */
 .form-wrapper {
   padding: 10px 60px;
+  display: block;
 }
 
 .form-wrapper h2 {
