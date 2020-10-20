@@ -6,6 +6,7 @@ const CategoryFilter = ({ handleFilterChange }) => {
     'All',
     'Action',
     'Biography',
+    'Fiction',
     'History',
     'Horror',
     'Kids',
@@ -14,9 +15,13 @@ const CategoryFilter = ({ handleFilterChange }) => {
   ];
 
   return (
-    <div>
-      <p>Filter:</p>
-      <select name="category" onChange={handleFilterChange}>
+    <div className="filter-wrapper">
+      <p className="filter-word">Filter by :</p>
+      <select
+        name="category"
+        onChange={handleFilterChange}
+        className="filter-select"
+      >
         {categories.map(e => (
           <option key={e}>{e}</option>
         ))}

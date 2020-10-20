@@ -2,8 +2,6 @@
 
 >A Book store management app built on the React library.
 
-<!-- ![Start page](./todolist.png) -->
-
 ## Table of Contents
 
 - [Features](#features)
@@ -15,6 +13,8 @@
 - [Authors](#authors)
 
 ## Features
+
+![Screenshot](./screenshot.png)
 
 - Allows user to organize and manage the Bookstore.
 
